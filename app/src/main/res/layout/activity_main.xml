@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--    背景画像のコード    -->
+    <ImageView
+        android:id="@+id/backgrundImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ver_1_1" />
+
+    <!--    ヘッダー画像のコード      -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="105dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#feefc6">
+
+        <ImageView
+            android:id="@+id/headerImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ver_1_0" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!--    タイトル画面のコード      -->
+
+    <ImageView
+        android:id="@+id/titleImg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:elevation="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/headertitle" />
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:elevation="30dp"
+        android:gravity="center"
+        android:text="ずかん"
+        android:textColor="#000000"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/titleImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/header"
+        app:layout_constraintTop_toTopOf="@+id/titleImg" />
+
+    <!--    フッターのコード    -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/footer"
+        android:layout_width="0dp"
+        android:layout_height="105dp"
+        android:backgroundTint="#EEE2DE"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#9B9B9B">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/zukanButton"
+                android:layout_width="96dp"
+                android:layout_height="78dp"
+                android:backgroundTint="#ffffff"
+                android:elevation="30dp"
+                android:visibility="visible"
+                app:cornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/syasinButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/syasinButton"
+                android:layout_width="96dp"
+                android:layout_height="78dp"
+                android:backgroundTint="#ffffff"
+                app:cornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/setteiButton"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/zukanButton"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <Button
+                android:id="@+id/setteiButton"
+                android:layout_width="96dp"
+                android:layout_height="78dp"
+                android:backgroundTint="#ffffff"
+                app:cornerRadius="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/syasinButton"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <ImageView
+                android:id="@+id/zukanImg"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                app:layout_constraintBottom_toBottomOf="@+id/zukanButton"
+                app:layout_constraintEnd_toEndOf="@+id/zukanButton"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/zukanButton"
+                app:layout_constraintTop_toTopOf="@+id/zukanButton"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/book" />
+
+            <ImageView
+                android:id="@+id/cameraImg"
+                android:layout_width="105dp"
+                android:layout_height="86dp"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                app:layout_constraintBottom_toBottomOf="@+id/syasinButton"
+                app:layout_constraintEnd_toEndOf="@+id/syasinButton"
+                app:layout_constraintStart_toStartOf="@+id/syasinButton"
+                app:layout_constraintTop_toTopOf="@+id/syasinButton"
+                app:srcCompat="@drawable/camera" />
+
+            <ImageView
+                android:id="@+id/gearImg"
+                android:layout_width="105dp"
+                android:layout_height="86dp"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                app:layout_constraintBottom_toBottomOf="@+id/setteiButton"
+                app:layout_constraintEnd_toEndOf="@+id/setteiButton"
+                app:layout_constraintStart_toStartOf="@+id/setteiButton"
+                app:layout_constraintTop_toTopOf="@+id/setteiButton"
+                app:srcCompat="@drawable/gear" />
+
+            <TextView
+                android:id="@+id/zukanText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="ずかん"
+                android:textColor="#000000"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/zukanButton"
+                app:layout_constraintEnd_toEndOf="@+id/zukanButton"
+                app:layout_constraintStart_toStartOf="@+id/zukanButton" />
+
+            <TextView
+                android:id="@+id/cameraText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="しゃしん"
+                android:textColor="#000000"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/syasinButton"
+                app:layout_constraintEnd_toEndOf="@+id/syasinButton"
+                app:layout_constraintStart_toStartOf="@+id/syasinButton" />
+
+            <TextView
+                android:id="@+id/setteiText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="せってい"
+                android:textColor="#000000"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/setteiButton"
+                app:layout_constraintEnd_toEndOf="@+id/setteiButton"
+                app:layout_constraintStart_toStartOf="@+id/setteiButton" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

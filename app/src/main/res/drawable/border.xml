@@ -1,0 +1,9 @@
+<!-- textview_border.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="1dp" android:right="1dp" android:top="1dp" android:bottom="1dp">
+        <shape android:shape="rectangle">
+            <stroke android:color="@android:color/white" android:width="5dp" /> <!-- 枠線の色と太さを設定 -->
+            <solid android:color="@android:color/transparent" /> <!-- 背景の色を透明に設定 -->
+        </shape>
+    </item>
+</layer-list>
